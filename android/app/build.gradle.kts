@@ -18,17 +18,15 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
+defaultConfig {
+    applicationId = "com.example.torch_app"
+    minSdkVersion(23) // Use parentheses instead of assignment
+    targetSdkVersion(flutter.targetSdkVersion) // Same format here
+    versionCode = flutter.versionCode
+    versionName = flutter.versionName
+}
 
-    defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.torch_app"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
-    }
+
 
     buildTypes {
         release {
